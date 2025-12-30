@@ -4,13 +4,15 @@ import plotly.express as px
 
 df = pd.read_csv(r"./output/qb_epa_stats.csv")
 
+num_players = df["player"].nunique()
+
 fig = px.line(
   df,
   x="season",
   y="rank",
-  color="player",
   markers=True,
-  title="Rookie QB EPA Rank Trajectory 2016-2024",
+  facet_row="player",
+  title="Rookie QB EPA Rank Trajectory (2016-2024)",
   labels={
     "season":"season",
     "rank": "EPA Rank",
@@ -22,9 +24,12 @@ fig = px.line(
 fig.update_yaxes(autorange="reversed")
 
 fig.update_layout(
-  template="plotly_dark",
-  legend_title_text="QB",
-  hovermode="x unified",
+    template="plotly_dark",
+    hovermode="x unified",
+    height=300 * num_players,    # KEY: makes each chart big
 )
+
+# Clean up facet labels
+fig.for_each_annotation(lambda a: a.update(text=a.text.split("=")[1]))
 
 fig.show()
