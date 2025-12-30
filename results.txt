@@ -1,0 +1,20 @@
+1. Elite offenses matter more than elite defenses
+  a. 8/9 teams were top-8 offense
+
+2. Quarterback performance is the strongest signal
+  a. 8/9 had top-9 Quarterback
+
+3. No team won with all three units being mediocre
+
+4. Hard Filters:
+  a. QB EPA <= 8
+  b. Offensive EPA <= 10
+
+
+Offense: NE,GB,LA,BUF,DAL,SF,IND,CHI,KC,DET
+
+Defense: LA
+
+MAYE,PURDY,LOVE,ALLEN,STAFFORD,DARNOLD,JONES,PRESCOTT
+
+Final Teams: NE,GB,SF,BUF,LA
